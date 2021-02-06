@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InicioController;
+use App\Http\Controllers\LibroController;
+use App\Http\Controllers\EditorialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
+
+    Route::get('/', [InicioController::class, 'getindex']);
+
+Route::get('/libros', [LibroController::class, 'getLibro']);
+
+Route::get('/editorial', [EditorialController::class, 'getEditorial']);
 });
