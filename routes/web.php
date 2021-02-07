@@ -15,13 +15,8 @@ use App\Http\Controllers\EditorialController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('main');
-
-    Route::get('/', [InicioController::class, 'getindex']);
+ Route::get('/', [InicioController::class, 'getindex']);
 
 Route::get('/libros', [LibroController::class, 'getLibro']);
 
 Route::get('/editorial', [EditorialController::class, 'getEditorial']);
-});
