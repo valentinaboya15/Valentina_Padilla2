@@ -19,4 +19,6 @@ use App\Http\Controllers\EditorialController;
 
 Route::get('/libros', [LibroController::class, 'getLibro']);
 
+Route::get('/libros/registro', [LibroController::class, 'form_registro'])->name('formulario_registro');
+
 Route::get('/editorial', [EditorialController::class, 'getEditorial']);

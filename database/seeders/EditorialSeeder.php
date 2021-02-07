@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 use Illuminate\Support\Facades\DB; 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Str;
 use Illuminate\Database\Seeder;
 
 class EditorialSeeder extends Seeder

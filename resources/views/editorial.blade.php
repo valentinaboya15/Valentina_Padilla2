@@ -1,11 +1,11 @@
 @extends('main')
 @section('contenido')
 <h1>Listado De Editoriales</h1>
-
+<br>
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">ID</th>
+            <th scope="col">#</th>
             <th scope="col">NOMBRE</th>
             <th scope="col">DIRECCION </th>
             <th scope="col">CIUDAD</th>
@@ -13,15 +13,14 @@
         </tr>
     </thead>
     <tbody>
-    @foreach($editorial as $c)
-      
+    @foreach($editorial as $e)
             <tr>
            
-            <td> {{ $c->id }} </td>
-            <td> {{ $c->nombre}} </td>
-            <td> {{ $c->direccion}}</td>
-            <td> {{ $c->ciudad}} </td>
-            <td> {{ $c->telefono}}</td>
+            <td>{{ $e->id}} </td>
+            <td> {{ $e->nombre}} </td>
+            <td> {{ $e->direccion}}</td>
+            <td> {{ $e->ciudad}} </td>
+            <td> {{ $e->telefono}}</td>
             </tr>
         
     @endforeach
