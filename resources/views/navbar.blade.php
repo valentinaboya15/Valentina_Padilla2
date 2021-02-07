@@ -20,6 +20,10 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/editorial')}}" tabindex="-1" role="button" aria-disabled="true">Editorial</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('')}}" tabindex="-1" role="button" aria-disabled="true">Parcial A</a>
+      </li>
       
     </ul>
    
