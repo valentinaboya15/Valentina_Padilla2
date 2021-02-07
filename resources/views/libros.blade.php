@@ -3,7 +3,7 @@
 <h1>Listado De Libros</h1>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
  
-  <button class="btn btn-primary" type="button">Registrar</button>
+<td> <a href="libros/registro" class="btn btn-success">Registrar</a></td>
 </div>
 
 <br>
@@ -28,8 +28,8 @@
             <td> {{ $c->titulo}}</td>
             <td>{{ $c->nombre}}</td>
             <td> {{ $c->precio}} </td>
-            <td> {{}}</td>
-            <td> <a href="" class="btn btn-success">Actualizar</a></td>
+            <td> {{$c->precio}}</td>
+            <td> <a href="{{route('form_actualizaLibros',$c->id)}}" class="btn btn-success">Editar</a></td>
             </tr>
         
     @endforeach

@@ -2,8 +2,8 @@
 @section('contenido')
 
 <div class="container">
-<h1> Registro de Libros </h1>
-    <form action="{{ url('libros/registrar') }}" method="POST">
+<h1> Edicion de Libros </h1>
+    <form action="{{ route('libros/actualizado', $libro->id) }}" method="POST">
         @csrf
        
         <label for="ISBN">ISBN </label>
@@ -26,9 +26,10 @@
         <option value="5">La Santillana </option>
         </select>
             
-        <button type="submit" class="btn btn-success">Registrar </button>
-
+        <button type="submit" class="btn btn-success">Actualizar</button>
+        <a type="submit" class="btn btn-danger" href="{{route('libros')}}">Cancelar</a>
     </form>
     
-    <td> <a href="" class="btn btn-success">Cancelar</a></td>
+    
+
 @endsection

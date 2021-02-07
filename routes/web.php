@@ -21,4 +21,10 @@ Route::get('/libros', [LibroController::class, 'getLibro']);
 
 Route::get('/libros/registro', [LibroController::class, 'form_registro'])->name('formulario_registro');
 
+Route::post('/libros/registrar', [LibroController::class, 'registrar'])->name('registro_libros');
+
+Route::get('libros/actualizar/{id}', [LibroController::class, 'form_actualiza'])->name('form_actualizaLibros');
+
+Route::post('libros/actualizado/{id}', [LibroController::class, 'actualizar'])->name('actualizarLibro');
+
 Route::get('/editorial', [EditorialController::class, 'getEditorial']);
